@@ -32,7 +32,7 @@ Edit
 
 ---
 
-## ⚙️ How to Run (No Tech Background Needed)
+## ⚙️ How to Run 
 
 > 🐍 Make sure you have Python 3.10+ installed  
 > ✅ Works on Windows, Mac, or Linux
