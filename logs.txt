@@ -1,0 +1,3 @@
+Item 'H.Q.Widget' mapped to SKU ABC123, price ₹100, quantity 10
+Item 'Gear Box' mapped to SKU XYZ789, price ₹2500, quantity 2
+Item 'Bolt Kit' mapped to SKU LMN456, price ₹500, quantity 5

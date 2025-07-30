@@ -1,0 +1,6 @@
+pandas
+reportlab
+python-docx
+openpyxl
+fpdf
+flask

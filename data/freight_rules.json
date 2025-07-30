@@ -1,0 +1,12 @@
+{
+  "default_freight": 150,
+  "freight_by_pincode": {
+    "400001": 100,
+    "560001": 120
+  },
+  "freight_by_weight": {
+    "upto_5kg": 50,
+    "upto_20kg": 100,
+    "above_20kg": 200
+  }
+}

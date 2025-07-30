@@ -1,0 +1,4 @@
+description,sku,unit_price,quantity,total
+stainless steel bolt,ss-bolt,5.0,1,5.0
+hex nut,hex-nut,2.0,1,2.0
+washer,washer,1.0,1,1.0
