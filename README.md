@@ -1,8 +1,8 @@
 # 🧾 Pactle Quote Generator
 
-A mini project to help generate quotes from messy RFQs (Request for Quotations) using fuzzy logic and basic pricing rules.
+This mini-project helps generate quotes from messy RFQs (Request for Quotations) using simple rules, fuzzy matching, and pricing logic.
 
-🛠️ This was built as part of a hiring assignment and is perfect for showcasing basic data parsing, mapping, and PDF generation — even without advanced coding skills.
+🛠️ Built as part of a hiring assignment — it shows how to parse input, match items, apply taxes/shipping, and create downloadable quote files like PDF, CSV, and JSON.
 
 ---
 
@@ -10,21 +10,21 @@ A mini project to help generate quotes from messy RFQs (Request for Quotations) 
 
 .
 ├── main.py # Main script to run everything
-├── api.py # (Optional) API layer if needed
+├── api.py # Optional Flask API (for advanced use)
 ├── input/
-│ └── sample_rfq.csv # Example input data (raw product names)
+│ └── sample_rfq.csv # Example RFQ input with messy item names
 ├── data/
-│ ├── sku_aliases.csv # Maps messy names to clean product SKUs
-│ ├── price_master.csv # Product prices and details
-│ └── freight_rules.json # Freight or shipping logic
+│ ├── sku_aliases.csv # Maps raw item names to proper SKUs
+│ ├── price_master.csv # Pricing data for each SKU
+│ └── freight_rules.json# Freight charges or thresholds
 ├── output/
-│ ├── quote.csv # Final structured CSV quote
-│ ├── quote.json # JSON version
-│ ├── quote.pdf # Printable quote file
-│ └── log.txt # Matching + pricing steps log
-├── logs.txt # Debug info
-├── requirements.txt # Python dependencies
-└── README.md # You're reading it!
+│ ├── quote.csv # Final structured quote (spreadsheet)
+│ ├── quote.json # JSON version for ERP/API use
+│ ├── quote.pdf # Printable human-friendly quote
+│ └── log.txt # Shows how items were matched & priced
+├── logs.txt # Debug log (optional)
+├── requirements.txt # Required Python packages
+└── README.md # This file!
 
 yaml
 Copy
@@ -32,12 +32,15 @@ Edit
 
 ---
 
-## ⚙️ How to Run 
+## ⚙️ How to Run (Beginner Friendly)
 
-> 🐍 Make sure you have Python 3.10+ installed  
+> 🐍 Make sure Python 3.10 or above is installed  
 > ✅ Works on Windows, Mac, or Linux
 
-1. **Install required packages:**
+### Step-by-step:
+
+1. Open your terminal or command prompt in the project folder  
+2. Install required packages:
 
 ```bash
 pip install -r requirements.txt
@@ -47,27 +50,27 @@ bash
 Copy
 Edit
 python main.py
-Check your results:
+After running, check the output/ folder:
 
-Go to the output/ folder and open:
+quote.pdf → nicely formatted quote
 
-quote.pdf for a nice visual quote
+quote.csv or quote.json → machine-readable formats
 
-quote.csv or quote.json for structured formats
+log.txt → explains how items were matched & priced
 
 🧠 How It Works (Simple View)
 Step	What it Does
-1. Input Parsing	Reads messy product names from input file
-2. Fuzzy Matching	Matches names like "steel bolt" to standard SKUs like "ss-bolt"
-3. Pricing Logic	Adds base price, GST, discount, shipping from rule files
-4. Output Gen	Creates downloadable quote in PDF, JSON, and CSV formats
+Input Parsing	Reads messy product names from RFQ CSV
+Fuzzy Matching	Maps names like “steel bolt 12mm” → SKU SB12
+Pricing Logic	Adds price, GST, discount, shipping using rules
+Output Gen	Creates PDF, CSV, and JSON versions of the quote
 
 💡 Notes
-Useful for small manufacturers or B2B teams making frequent manual quotes.
+No AI or external tools used — just clean Python logic
 
-You can easily customize the price list, aliases, and rules from data/.
+Rules and pricing are fully editable in the data/ folder
 
+Useful for small businesses doing manual quotes frequently
 
-📫 Contact
-Made by Dhiren Suhalka
-GitHub: @Dhirensuhalka
+Easy to extend into a full product with backend/API
+
